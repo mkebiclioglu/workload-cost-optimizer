@@ -16,7 +16,9 @@ Predict query runtimes across compute sizes, then schedule dependent workloads a
 - XGBoost regression: runtime as a function of query features × compute size
 - **Monotone constraint on compute size:** bigger compute never predicts slower
 - **Predict speedup vs a baseline size**, since that is what the scheduler needs
-- **Quantile outputs:** P50 for cost, P90 for SLA checks
+- **Quantile outputs:** P10 / P50 / P90
+  - **P50:** single headline estimate (center), used for cost
+  - **P10–P90:** expected range; P90 used for SLA checks
 - **Evaluation:**
   - Grouped train/test splits by model identity, to test on unseen workloads
   - Held-out compute-size changes, to test predicted speedup/slowdown
