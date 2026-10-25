@@ -24,7 +24,6 @@ Predict query runtimes across compute sizes, then schedule dependent workloads a
 - **Decides:** when each workload runs, when to scale compute up or down
 - **Objective:** minimize total compute cost
 - **Constraints:** dependencies, concurrency limits, completion-time SLAs
-- **Assumption:** dependent tasks share one compute resource, so a resize affects every task running on it
 
 ## 4. Simulation & validation
 
